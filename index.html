@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker | Assignment-04</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen pb-20">
+    <div
+      class="max-w-7xl mx-auto navbar bg-white shadow-sm px-4 md:px-12 mb-10"
+    >
+      <div class="flex-1">
+        <a class="text-2xl font-bold text-blue-600">JobTracker</a>
+      </div>
+      <div class="flex items-center justify-between gap-2">
+        <a
+          class="text-sm font-medium text-gray-500 bg-green-100 px-5 py-2 rounded-xl"
+          href=""
+          >Home</a
+        >
+        <a
+          class="text-sm font-medium text-gray-500 bg-green-100 px-5 py-2 rounded-xl"
+          href=""
+          >About</a
+        >
+      </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div
+          class="bg-blue-600 p-8 rounded-2xl shadow-lg text-white transition-all"
+        >
+          <p class="text-sm font-semibold uppercase opacity-80">
+            Available / Total
+          </p>
+          <h2 id="total-count" class="text-5xl font-bold mt-2">0</h2>
+        </div>
+        <div
+          class="bg-emerald-500 p-8 rounded-2xl shadow-lg text-white transition-all"
+        >
+          <p class="text-sm font-semibold uppercase opacity-80">Interviewing</p>
+          <h2 id="interview-count" class="text-5xl font-bold mt-2">0</h2>
+        </div>
+        <div
+          class="bg-red-500 p-8 rounded-2xl shadow-lg text-white transition-all"
+        >
+          <p class="text-sm font-semibold uppercase opacity-80">Rejected</p>
+          <h2 id="rejected-count" class="text-5xl font-bold mt-2">0</h2>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4"
+      >
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4 md:mb-2">
+            Available Jobs
+          </h3>
+          <div class="flex gap-2">
+            <button
+              onclick="filterJobs('ALL')"
+              id="btn-all"
+              class="btn btn-sm btn-primary px-6"
+            >
+              All
+            </button>
+            <button
+              onclick="filterJobs('INTERVIEW')"
+              id="btn-interview"
+              class="btn btn-sm btn-outline px-6"
+            >
+              Interview
+            </button>
+            <button
+              onclick="filterJobs('REJECTED')"
+              id="btn-rejected"
+              class="btn btn-sm btn-outline px-6"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div
+          class="badge badge-outline border-gray-300 p-4 text-blue-600 font-bold"
+          id="job-count-badge"
+        >
+          0 jobs
+        </div>
+      </div>
+
+      <div
+        id="job-card-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      ></div>
+
+      <div
+        id="no-jobs-view"
+        class="hidden flex flex-col items-center justify-center bg-white rounded-3xl border-2 border-dashed border-gray-200 text-center p-20"
+      >
+        <div class="bg-gray-100 p-6 rounded-full mb-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-16 w-16 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800">No jobs available</h3>
+        <p class="text-gray-500 mt-2">
+          Try changing your filter or add new applications.
+        </p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
