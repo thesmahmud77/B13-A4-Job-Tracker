@@ -109,6 +109,19 @@ function renderJobs() {
       if (job.status === "REJECTED")
         cardStyle = "bg-red-50 border-red-200 shadow-red-100";
 
+      // স্ট্যাটাসের ওপর ভিত্তি করে বাটন নির্ধারণ করা হচ্ছে
+      let actionButtons = "";
+      if (job.status === "NOT APPLIED") {
+        actionButtons = `
+          <button onclick="updateStatus(${job.id}, 'INTERVIEW')" class="btn btn-outline btn-success btn-sm rounded-xl">INTERVIEW</button>
+          <button onclick="updateStatus(${job.id}, 'REJECTED')" class="btn btn-outline btn-error btn-sm rounded-xl">REJECTED</button>
+        `;
+      } else {
+        actionButtons = `
+          <button onclick="deleteStatus(${job.id})" class="btn btn-error btn-sm rounded-xl w-full text-white">Delete</button>
+        `;
+      }
+
       const card = document.createElement("div");
       card.className = `${cardStyle} p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border flex flex-col justify-between`;
 
@@ -125,9 +138,8 @@ function renderJobs() {
           </div>
           <p class="text-gray-500 text-sm leading-relaxed mb-6">${job.desc}</p>
         </div>
-        <div class="grid grid-cols-2 gap-4 border-t border-gray-200/50 pt-6">
-          <button onclick="updateStatus(${job.id}, 'INTERVIEW')" class="btn btn-outline btn-success btn-sm rounded-xl" ${job.status !== "NOT APPLIED" ? "disabled" : ""}>INTERVIEW</button>
-          <button onclick="updateStatus(${job.id}, 'REJECTED')" class="btn btn-outline btn-error btn-sm rounded-xl" ${job.status !== "NOT APPLIED" ? "disabled" : ""}>REJECTED</button>
+        <div class="grid grid-cols-1 gap-4 border-t border-gray-200/50 pt-6">
+          ${actionButtons}
         </div>
       `;
       container.appendChild(card);
@@ -160,6 +172,15 @@ function updateStatus(id, newStatus) {
   const job = jobs.find((j) => j.id === id);
   if (job && job.status === "NOT APPLIED") {
     job.status = newStatus;
+    renderJobs();
+  }
+}
+
+// ডিলিট বা রিলিজ করার ফাংশন
+function deleteStatus(id) {
+  const job = jobs.find((j) => j.id === id);
+  if (job) {
+    job.status = "NOT APPLIED";
     renderJobs();
   }
 }
