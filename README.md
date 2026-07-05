@@ -1,25 +1,36 @@
-# 💼 JobTracker - Smart Job Application Tracker
+# JobTracker - Job Application Tracker
 
-JobTracker is a modern, responsive, and interactive frontend web application designed to help job seekers manage their job applications seamlessly. This project features dynamic state management, reactive status updating, and real-time dashboard calculations based on user interactions.
+A sleek, interactive, and fully responsive web application designed to seamlessly manage and track your job search journey. Built with Vanilla JavaScript, Tailwind CSS, and DaisyUI.
 
-## 🚀 Live Demo : https://thesmahmud77.github.io/B13-A4-Job-Tracker/
----
+## 🔗 Live Link: https://b13-a4-job-tracker.vercel.app/
 
-## ✨ Features
+## 🚀 Features
 
-- **📊 Dynamic Analytics Dashboard:** Displays real-time counts for Available Jobs (`NOT APPLIED`), `Interviewing`, and `Rejected` status instantly.
-- **🔍 Advanced Filtering System:** Allows users to filter job cards seamlessly between **All**, **Interview**, and **Rejected** tabs.
-- **⚡ Reactive Status Updates:** Move any job application to "Interview" or "Rejected" with a single click. Action buttons auto-disable once applied to maintain data integrity.
-- **📱 Fluid & Mobile-First Layout:** Fully responsive layout built with Tailwind CSS Grid and Flexbox that works perfectly on Mobile, Tablet, and Desktop screens.
-- **🎨 Modern UI/UX:** Styled using **DaisyUI** components with interactive hover effects and state-based color indicators (e.g., green for interviews, red for rejections).
-- **📭 Empty State View:** A beautiful custom "No jobs available" illustration and layout that displays when a filter returns empty results.
-
----
+- **Dynamic Dashboard Metrics:** Real-time counter cards showing the total available jobs, active interviews, and rejection counts.
+- **Advanced State Management:**
+  - Change application status to `INTERVIEW` or `REJECTED` with a single click.
+  - Dynamically remove/reset jobs from Interview/Rejected categories back to `NOT APPLIED` status using the **Delete** button.
+- **Real-Time Interactive Search:** Seamlessly search for jobs by company name or job role instantly as you type.
+- **Smart Category Filtering:** Filter jobs effortlessly through navigation tabs (`All`, `Interview`, `Rejected`).
+- **Interactive Add Job Form:** Pop-up modal input layout to dynamically add custom new job applications into the active dashboard feed.
+- **State-Aware Empty Views:** A dedicated "No jobs found" graphic placeholder layout that activates when search queries or filters yield no matches.
+- **Modern Responsive Design:** Completely optimized for Mobile, Tablet, and Desktop screens using Tailwind utility classes.
 
 ## 🛠️ Technologies Used
 
-- **HTML5:** Structuring the core application layout.
-- **Vanilla JavaScript (ES6+):** Handling state management, array filtering (`.filter()`, `.find()`), DOM manipulation, and dynamic event listeners.
-- **Tailwind CSS (via CDN):** For rapid and responsive UI styling using utility classes.
-- **DaisyUI (via CDN):** Tailwind CSS component library for interactive badges, buttons, and structural elements.
+- **HTML5:** Structured semantic markup.
+- **Tailwind CSS:** Modern utility-first styling.
+- **DaisyUI:** Tailwind-based component kit for modern modals, inputs, and buttons.
+- **JavaScript (ES6+):** Pure vanilla JavaScript for complex UI state management, real-time filtering, event listening, and dynamic DOM manipulation.
 
+## 📦 How to Run Locally
+
+Follow these quick steps to run the project on your machine:
+
+1. **Clone the repository:**
+
+   ```bash
+
+   ```
+
+## 📦 git clone: https://github.com/thesmahmud77/B13-A4-Job-Tracker
