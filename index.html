@@ -29,11 +29,24 @@
           href=""
           >About</a
         >
+        <a
+          class="text-sm font-medium text-gray-500 bg-green-100 px-5 py-2 rounded-xl"
+          href=""
+          >Services</a
+        >
       </div>
     </div>
 
     <main class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div
+          class="bg-blue-600 p-8 rounded-2xl shadow-lg text-white transition-all"
+        >
+          <p class="text-sm font-semibold uppercase opacity-80">
+            Available / Total
+          </p>
+          <h2 id="total-count" class="text-5xl font-bold mt-2">0</h2>
+        </div>
         <div
           class="bg-emerald-500 p-8 rounded-2xl shadow-lg text-white transition-all"
         >
@@ -105,6 +118,117 @@
         </p>
       </div>
     </main>
+    <!-- Enhanced Footer Section -->
+    <footer class="bg-white border-t border-gray-200 mt-20 text-gray-600">
+      <!-- Top Footer Content -->
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-12 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      >
+        <!-- Column 1: Brand Info -->
+        <div class="flex flex-col gap-3">
+          <a class="text-2xl font-bold text-blue-600">JobTracker</a>
+          <p class="text-sm leading-relaxed text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            expedita assumenda consectetur. Numquam fugiat error at corporis
+            quia quas sint deleniti pariatur ipsum veniam quis suscipit nobis,
+            alias explicabo ipsam.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4
+            class="text-sm font-bold text-gray-800 uppercase tracking-wider mb-4"
+          >
+            Quick Links
+          </h4>
+          <ul class="space-y-2 text-sm font-medium">
+            <li>
+              <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-600 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-600 transition-colors"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-600 transition-colors"
+                >Career Insights</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div>
+          <h4
+            class="text-sm font-bold text-gray-800 uppercase tracking-wider mb-4"
+          >
+            Contact Support
+          </h4>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex items-center gap-2">
+              <span>📧</span> support@jobtracker.com
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📞</span> +880 1234-567890
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span> Dhaka, Bangladesh
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div>
+          <h4
+            class="text-sm font-bold text-gray-800 uppercase tracking-wider mb-4"
+          >
+            Newsletter
+          </h4>
+          <p class="text-xs text-gray-500 mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            expedita assumenda consectetur.
+          </p>
+          <div class="join w-full">
+            <input
+              class="input input-bordered input-sm join-item w-full rounded-l-xl text-xs"
+              placeholder="Email address"
+            />
+            <button
+              class="btn btn-sm btn-primary join-item rounded-r-xl text-white px-4"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer Bar -->
+      <div class="border-t border-gray-100 bg-gray-50/50">
+        <div
+          class="max-w-7xl mx-auto px-4 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500"
+        >
+          <p>© 2026 JobTracker Ltd. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-blue-600 transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-blue-600 transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-blue-600 transition-colors"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

@@ -109,7 +109,6 @@ function renderJobs() {
       if (job.status === "REJECTED")
         cardStyle = "bg-red-50 border-red-200 shadow-red-100";
 
-      // স্ট্যাটাসের ওপর ভিত্তি করে বাটন নির্ধারণ করা হচ্ছে
       let actionButtons = "";
       if (job.status === "NOT APPLIED") {
         actionButtons = `
@@ -123,7 +122,7 @@ function renderJobs() {
       }
 
       const card = document.createElement("div");
-      card.className = `${cardStyle} p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border flex flex-col justify-between`;
+      card.className = `${cardStyle} border-2 border-gray-700/30 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border flex flex-col justify-between`;
 
       card.innerHTML = `
         <div>
